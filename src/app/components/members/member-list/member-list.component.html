@@ -1,1 +1,4 @@
-<p>member-list works!</p>
+<div class="container">
+    <h1>Lista de membros públicos do GitHub</h1>
+    <img *ngFor="let member of membersList" src="{{member.avatar_url}}" alt="..." class="img-thumbnail">
+</div>
