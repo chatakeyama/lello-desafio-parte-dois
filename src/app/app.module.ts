@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MemberListComponent } from './components/members/member-list/member-list.component';
 import { MemberComponent } from './components/members/member/member.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberListComponent,
-    MemberComponent
+    MemberComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
