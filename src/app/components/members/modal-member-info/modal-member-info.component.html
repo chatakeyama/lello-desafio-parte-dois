@@ -2,9 +2,9 @@
     <h4 class="modal-title">{{memberFullInfo?.login}}</h4>
 </div>
 <div class="modal-body">
-    Repositórios: {{memberFullInfo?.public_repos}} <br>
-    Seguidores: {{memberFullInfo?.followers}} <br>
-    Desde: {{memberFullInfo?.created_at | date: 'dd/MM/yyyy'}} 
+    Repositórios: {{memberFullInfo?.public_repos}}<br>
+    Seguidores: {{memberFullInfo?.followers}}<br>
+    Desde: {{memberFullInfo?.created_at | date: 'dd/MM/yyyy'}}
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Fechar</button>
