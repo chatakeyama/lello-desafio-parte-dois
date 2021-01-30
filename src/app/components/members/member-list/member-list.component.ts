@@ -16,7 +16,7 @@ export class MemberListComponent implements OnInit {
     private modalService: NgbModal, private memberInfo: MemberInfoService) { }
 
   membersList: Member[];
-  membersByRow: Member[] = [];
+  membersByRow: Member[];
 
   ngOnInit(): void {
 
