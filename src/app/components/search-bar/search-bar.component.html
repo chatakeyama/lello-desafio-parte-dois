@@ -1,13 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top ">
-    <a class="navbar-brand" href="#">Lista de membros públicos do GitHub</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#" aria-controls=""
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="">
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" placeholder="Buscar"
-            (keyup)="debounce.next($event)">
-        </form>
-    </div>
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Membros públicos do GitHub</a>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" placeholder="Buscar" (keyup)="debounce.next($event)">
+    </form>
 </nav>
