@@ -1,15 +1,19 @@
 <app-search-bar (emitValueSearch)="filterMembers($event)"></app-search-bar>
+
 <div class="container">
-    <div *ngFor="let row of membersByRow" class="card-deck">
-        <div *ngFor="let member of row" class="card" (click)="open(member)" appDarkenOnHover>
-            <img src="{{member.avatar_url}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">{{member.login}}</h5>
+
+    <div class="row row-cols-1 row-cols-md-3">
+        <div *ngFor="let member of filteredList" class="col mb-4">
+            <div class="card h-100" (click)="open(member)" appDarkenOnHover>
+                <img src="{{member.avatar_url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{member.login}}</h5>
+                </div>
             </div>
         </div>
     </div>
-    <div *ngIf="membersByRow && membersByRow.length===0">
+    <div *ngIf="filteredList && filteredList.length===0">
         Não foram encontrado resultados para sua busca.
     </div>
-</div>
 
+</div>

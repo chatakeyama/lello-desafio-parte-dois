@@ -16,14 +16,14 @@ export class MemberListComponent implements OnInit {
     private modalService: NgbModal, private memberInfo: MemberInfoService) { }
 
   membersList: Member[];
-  membersByRow: Member[];
+  filteredList: Member[];
 
   ngOnInit(): void {
 
     this.memberListService.listMembers().subscribe(
       members => {
         this.membersList = members;
-        this.membersByRow = this.groupColumnsByRow(this.membersList);
+        this.filteredList = members;
       }
     );
 
@@ -41,17 +41,13 @@ export class MemberListComponent implements OnInit {
   filterMembers = (searchTerm: string) => {
     searchTerm = searchTerm.trim().toLowerCase();
     if (searchTerm) {
-      const filteredList = this.membersList.filter(member => member.login.toLowerCase().includes(searchTerm));
-      this.membersByRow = this.groupColumnsByRow(filteredList);
+      this.filteredList = this.membersList.filter(member => member.login.toLowerCase().includes(searchTerm));
     } else {
-      this.membersByRow = this.groupColumnsByRow(this.membersList);
+      this.filteredList = this.membersList;
     }
-
   }
 
-
   open(member: Member) {
-
     this.memberInfo.getMemberFullInfo(member.login).subscribe(
       fullInfo => {
         const modalRef = this.modalService.open(ModalMemberInfoComponent);
