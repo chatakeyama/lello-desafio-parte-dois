@@ -29,15 +29,6 @@ export class MemberListComponent implements OnInit {
 
   }
 
-  groupColumnsByRow = (members: any[]) => {
-    const newRows = [];
-
-    for (let index = 0; index < members.length; index += 3) {
-      newRows.push(members.slice(index, index + 3));
-    }
-    return newRows;
-  }
-
   filterMembers = (searchTerm: string) => {
     searchTerm = searchTerm.trim().toLowerCase();
     if (searchTerm) {
