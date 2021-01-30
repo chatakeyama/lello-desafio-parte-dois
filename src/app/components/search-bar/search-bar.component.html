@@ -6,8 +6,8 @@
     </button>
     <div class="collapse navbar-collapse" id="">
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="">
-            <button class="btn btn-outline-success my-2 my-sm-0">Buscar</button>
+            <input class="form-control mr-sm-2" placeholder="Buscar"
+            (keyup)="debounce.next($event)">
         </form>
     </div>
 </nav>

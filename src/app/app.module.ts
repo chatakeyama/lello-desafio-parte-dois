@@ -14,7 +14,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     AppComponent,
     MemberListComponent,
     MemberComponent,
-    SearchBarComponent
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,

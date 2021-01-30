@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Member } from 'src/app/models/member.model';
 import { MemberListService } from 'src/app/services/member-list.service';
 
 @Component({
@@ -10,8 +11,8 @@ export class MemberListComponent implements OnInit {
 
   constructor(private memberListService: MemberListService) { }
 
-  membersList: any[];
-  membersByRow: any[] = [];
+  membersList: Member[];
+  membersByRow: Member[] = [];
 
   ngOnInit(): void {
 
@@ -31,6 +32,17 @@ export class MemberListComponent implements OnInit {
       newRows.push(members.slice(index, index + 3));
     }
     return newRows;
+  }
+
+  filterMembers = (searchTerm: string) => {
+    searchTerm = searchTerm.trim().toLowerCase();
+    if (searchTerm) {
+      const filteredList = this.membersList.filter(member => member.login.toLowerCase().includes(searchTerm));
+      this.membersByRow = this.groupColumnsByRow(filteredList);
+    }else{
+      this.membersByRow = this.groupColumnsByRow(this.membersList);
+    }
+
   }
 
 }
