@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{memberFullInfo?.login}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    Repositórios: {{memberFullInfo?.public_repos}} <br>
+    Seguidores: {{memberFullInfo?.followers}} <br>
+    Desde: {{memberFullInfo?.created_at | date: 'dd/MM/yyyy'}} 
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Fechar</button>
+</div>

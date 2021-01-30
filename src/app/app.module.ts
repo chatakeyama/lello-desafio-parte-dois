@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MemberListComponent } from './components/members/member-list/member-list.component';
 import { MemberComponent } from './components/members/member/member.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { ModalMemberInfoComponent } from './components/members/modal-member-info/modal-member-info.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     MemberListComponent,
     MemberComponent,
     SearchBarComponent,
+    ModalMemberInfoComponent,
   ],
   imports: [
     BrowserModule,
