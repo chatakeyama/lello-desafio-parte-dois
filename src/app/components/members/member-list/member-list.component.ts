@@ -50,7 +50,7 @@ export class MemberListComponent implements OnInit {
   open(member: Member) {
     this.memberInfo.getMemberFullInfo(member.login).subscribe(
       fullInfo => {
-        const modalRef = this.modalService.open(ModalMemberInfoComponent);
+        const modalRef = this.modalService.open(ModalMemberInfoComponent, { centered: true });
         modalRef.componentInstance.memberFullInfo = fullInfo
       }
     );
