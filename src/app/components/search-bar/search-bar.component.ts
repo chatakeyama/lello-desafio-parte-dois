@@ -18,7 +18,7 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
 
     this.debounce.pipe(
-      debounceTime(500)
+      debounceTime(300)
     ).subscribe(this.search);
 
   }
