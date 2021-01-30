@@ -1,7 +1,7 @@
 <app-search-bar (emitValueSearch)="filterMembers($event)"></app-search-bar>
 <div class="container">
     <div *ngFor="let row of membersByRow" class="card-deck">
-        <div *ngFor="let member of row" class="card" (click)="open(member)">
+        <div *ngFor="let member of row" class="card" (click)="open(member)" appDarkenOnHover>
             <img src="{{member.avatar_url}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-center">{{member.login}}</h5>

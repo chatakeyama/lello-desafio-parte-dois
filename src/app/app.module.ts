@@ -9,6 +9,7 @@ import { MemberListComponent } from './components/members/member-list/member-lis
 import { MemberComponent } from './components/members/member/member.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ModalMemberInfoComponent } from './components/members/modal-member-info/modal-member-info.component';
+import { DarkenOnHoverDirective } from './directives/darken-on-hover.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ModalMemberInfoComponent } from './components/members/modal-member-info
     MemberComponent,
     SearchBarComponent,
     ModalMemberInfoComponent,
+    DarkenOnHoverDirective,
   ],
   imports: [
     BrowserModule,
