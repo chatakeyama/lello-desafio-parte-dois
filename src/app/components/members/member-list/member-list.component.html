@@ -1,8 +1,7 @@
 <app-search-bar (emitValueSearch)="filterMembers($event)"></app-search-bar>
 
 <div class="container">
-
-    <div class="row row-cols-1 row-cols-md-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
         <div *ngFor="let member of filteredList" class="col mb-4">
             <div class="card h-100" (click)="open(member)" appDarkenOnHover>
                 <img src="{{member.avatar_url}}" class="card-img-top" alt="...">
@@ -15,5 +14,4 @@
     <div *ngIf="filteredList && filteredList.length===0">
         Não foram encontrado resultados para sua busca.
     </div>
-
 </div>
